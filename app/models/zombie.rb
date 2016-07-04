@@ -1,4 +1,6 @@
 class Zombie < ActiveRecord::Base
+  has_one :brain
+
   scope :rotting, where(rotting: true)
   scope :fresh, where("age < 20")
   scope :recent, order("created_at desc").limit(3)
@@ -14,3 +16,4 @@ class Zombie < ActiveRecord::Base
   def make_rotting
     self.rotting = true if age > 20
   end
+end
