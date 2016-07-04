@@ -2,4 +2,4 @@
 
 Rails 4 app builded in the Rails for zombies Tutorial
 
-<tt>rake doc:app</tt>.
+<tt> rails s </tt>.
