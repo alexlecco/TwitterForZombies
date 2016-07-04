@@ -1,5 +1,5 @@
 class Zombie < ActiveRecord::Base
-  has_one :brain
+  has_one :brain, dependent: :destroy
 
   scope :rotting, where(rotting: true)
   scope :fresh, where("age < 20")
